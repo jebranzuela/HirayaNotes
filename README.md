@@ -39,7 +39,7 @@ Follow the tutorial from the previous link [here](http://vajrasky.net/2015/01/se
 #### Nginx 
 
 1. `sudo vim /etc/nginx/sites-available/default` - edit settings for Nginx
-..* This will be used mainly to edit `location /media` and `location/static`. You can change the file path for `media` and `static` files as you wish. Just remember to put all the assets of your project here.
+  * This will be used mainly to edit `location /media` and `location/static`. You can change the file path for `media` and `static` files as you wish. Just remember to put all the assets of your project here.
 
 2. `sudo restart nginx restart` - restarts Nginx to reflect the changes you made.
 
@@ -63,3 +63,57 @@ DATABASES = {
     }
 }
 ```
+
+#### Django
+
+##### Tutorial 01
+
+1. `django-admin startproject 'project_name'` - create a new project
+
+2. `python manage.py runserver` - runs the webserver
+>To access the web server, type 192.168.33.10 (from the installation) on your browser
+
+3. `python manage.py startapp polls` - create a new app
+
+#### Tutorial 02
+
+>`test_project` refers to the folder created after running `django-admin startproject test_project`
+>`test_app` refers to the folder created after running `python manage.py startapp test_app`
+
+1. `python manage.py migrate` - used to create migration files and apply changes
+
+2. `sudo vim test_project/settings.py` - edit `INSTALLED_APPS` to include an app by adding `name_of_app.apps.name_of_appConfig`
+
+3. `python manage.py makemigrations polls` - create a migration file after you made changes to the app. Run `python manage.py' migrate after
+
+4. `python manage.py shell` - open the Python shell where you can import your Django files.
+
+5. `object.save()` - saves the object in the database
+
+6. `model_name.objects.all()` - display all model objects in the database
+
+7. `model_name.objects.filter(args)` - display all model objects in the database that satisfies the argument/s
+
+8. `python manage.py createsuperuser` - create a user that can access the django admin panel
+
+9. `sudo vim test_app/admin.py` - edit to add a model in the admin panel by adding `admin.site.register(model_name)`
+
+10. `python manage.py collectstatic` - get static files from Django. It is mainly used to get the css file for the admin panel. Make sure to put the file on the static folder you set for Nginx
+
+#### Tutorial 03
+
+1. `from .models import model_name` - put this on views.py to use models inside it.
+
+2. `mkdir test_app/templates/test_app` - directory where you put the html files for views
+
+3. `return render(request, 'test_app/name.html', passed_variables)` - used to call the html file when requested where passed_variables is a list of tuples formatted as
+>`name_in_html: variable_in_views`
+
+4. `get_object_or_404(Object, pk=object_id)` - check if object exists on the database 
+
+5. `app_name = 'name_of_app'` - used for better url routing
+
+##### Modules
+
+1. `from django.http import HttpResponse` - used to return an Httpresponse from `view`.
+
