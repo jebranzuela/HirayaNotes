@@ -57,7 +57,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'project_db',
         'USER': 'project_user',
-        'PASSWORD': 'penguinbercinta',
+        'PASSWORD': 'yourpassword',
         'HOST': 'localhost',
         'PORT': '',
     }
@@ -112,6 +112,10 @@ DATABASES = {
 4. `get_object_or_404(Object, pk=object_id)` - check if object exists on the database 
 
 5. `app_name = 'name_of_app'` - used for better url routing
+
+6. `<li><a href="{% url 'app_name:url_name' params %}">{{ text }}</a></li>` - link `text` to the url
+
+6
 
 ##### Modules
 
