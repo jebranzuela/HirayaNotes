@@ -75,7 +75,7 @@ DATABASES = {
 
 3. `python manage.py startapp polls` - create a new app
 
-#### Tutorial 02
+##### Tutorial 02
 
 >`test_project` refers to the folder created after running `django-admin startproject test_project`
 >`test_app` refers to the folder created after running `python manage.py startapp test_app`
@@ -100,7 +100,7 @@ DATABASES = {
 
 10. `python manage.py collectstatic` - get static files from Django. It is mainly used to get the css file for the admin panel. Make sure to put the file on the static folder you set for Nginx
 
-#### Tutorial 03
+##### Tutorial 03
 
 1. `from .models import model_name` - put this on views.py to use models inside it.
 
