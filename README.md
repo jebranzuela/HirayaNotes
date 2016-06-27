@@ -115,8 +115,21 @@ DATABASES = {
 
 6. `<li><a href="{% url 'app_name:url_name' params %}">{{ text }}</a></li>` - link `text` to the url
 
-6
+##### Using forms
 
+1. `forms.py` - define Form classes here to use in `views.py`
+
+2. `{{ form }}` - creates a form for all the fields you defined on `forms.py`
+
+3. `{{ form.field_name }}` - creates a form for the specified field only
+
+##### Logging
+
+1. `formatters` - used to style the output written on the console/file
+
+2. `handlers` - dictates what will happen when a log output occurs
+
+3/ `loggers` - assigns the parts of your projects to specific handler/s
 ##### Modules
 
 1. `from django.http import HttpResponse` - used to return an Httpresponse from `view`.
