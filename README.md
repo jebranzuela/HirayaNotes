@@ -129,7 +129,23 @@ DATABASES = {
 
 2. `handlers` - dictates what will happen when a log output occurs
 
-3/ `loggers` - assigns the parts of your projects to specific handler/s
+3. `loggers` - assigns the parts of your projects to specific handler/s
+
+##### Celery
+
+1. Go to this [site](https://realpython.com/blog/python/asynchronous-tasks-with-django-and-celery/ "Celery Tutorial") to setup Celery and Redis
+
+2. Do not forget to add the task in `settings.py`
+```python
+CELERYBEAT_SCHEDULE = {
+    'task_name': {
+        'task': 'task_name',
+        'schedule': timedelta(your_preferred_time),
+        'args': () #if the function needs arguments
+    },
+}
+```
+
 ##### Modules
 
 1. `from django.http import HttpResponse` - used to return an Httpresponse from `view`.
