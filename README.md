@@ -134,6 +134,7 @@ DATABASES = {
 ##### Celery
 
 1. Go to this [site](https://realpython.com/blog/python/asynchronous-tasks-with-django-and-celery/ "Celery Tutorial") to setup Celery and Redis
+>Use `sudo aptitude install redis-server` to install redis
 
 2. Do not forget to add the task in `settings.py`
 ```python
