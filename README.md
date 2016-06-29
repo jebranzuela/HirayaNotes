@@ -134,7 +134,7 @@ DATABASES = {
 ##### Celery
 
 1. Go to this [site](https://realpython.com/blog/python/asynchronous-tasks-with-django-and-celery/ "Celery Tutorial") to setup Celery and Redis
->Use `sudo aptitude install redis-server` to install redis
+> Use `sudo aptitude install redis-server` to install redis
 
 2. Do not forget to add the task in `settings.py`
 ```python
@@ -147,7 +147,43 @@ CELERYBEAT_SCHEDULE = {
 }
 ```
 
-##### Modules
+#### REST Framework
 
-1. `from django.http import HttpResponse` - used to return an Httpresponse from `view`.
+##### Serialization
 
+1. `pip install djangorestframework` - to install REST framework
+
+2. `serializer = ModelNameSerializer(model_instance)` - translate model instance to native datatypes
+> Use `serializer.data` to view the fields of the model
+
+3. `content = JSONRenderer().render(serializer.data)` - convert the data into `json` format
+
+4. To deserialize the data:
+```python
+stream = BytesIO(content)
+data = JSONParser().parse(stream)
+serializer = ModelNameSerializer(data=data)
+serializer.is_valid()
+serializer.validated_data
+serializer.save()
+```
+
+###### Modules
+
+1. `from snippets.serializers import SnippetSerializer`
+
+2. `from rest_framework.renderers import JSONRenderer`
+
+3. `from rest_framework.parsers import JSONParser`
+
+4. `from django.utils.six import BytesIO`
+
+##### Requests and Responses
+
+###### Modules
+
+1. `from rest_framework import status`
+
+2. `from rest_framework.decorators import api_view`
+
+3. `from rest_framework.response import Response`
