@@ -180,6 +180,18 @@ serializer.save()
 
 ##### Requests and Responses
 
+1. `serializer.is_valid()` - checks if the data are valid
+
+2. `@api_view(['GET', 'POST', 'PUT', 'DELETE'])` - dictates what requests a view function will handle
+
+3. `return Response(serializer.data, status = status_code)` -  renders to content type as requested by the client
+> `serializer` will be the output after running ModelNameSerializer()
+> `serializer.error` will give a list of errors when serializer is not valid
+> `status` is an optional argument
+
+4. `urlpatterns = format_suffix_patterns(urlpatterns)` - add to `urls.py` so you can access the link with `.json` at the end
+> Add `format=None` to the view that you want to add a format suffix 
+
 ###### Modules
 
 1. `from rest_framework import status`
@@ -187,3 +199,5 @@ serializer.save()
 2. `from rest_framework.decorators import api_view`
 
 3. `from rest_framework.response import Response`
+
+#####
