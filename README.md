@@ -260,5 +260,12 @@ serializer.save()
 
 1. The Bootstrap grid systems works using these rules:
 
->sdfsad
-dsfsadfsda
+>
+| Features Bootstrap 3 Grid System | Extra small devices Phones (<768px) | Small devices Tablets (≥768px)                   | Medium devices Desktops (≥992px)                 | Large devices Desktops (≥1200px)                 |
+|----------------------------------|-------------------------------------|--------------------------------------------------|--------------------------------------------------|--------------------------------------------------|
+| Max container width              | None (auto)                         | 750px                                            | 970px                                            | 1170px                                           |
+| Grid behavior                    | Horizontal at all times             | Collapsed to start, horizontal above breakpoints | Collapsed to start, horizontal above breakpoints | Collapsed to start, horizontal above breakpoints |
+| Class prefix                     | .col-xs-                            | .col-sm-                                         | .col-md-                                         | .col-lg-                                         |
+| Max column width                 | Auto                                | ~62px                                            | ~81px                                            | ~97px                                            |
+
+
