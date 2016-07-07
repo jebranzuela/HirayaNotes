@@ -6,6 +6,7 @@ This site will cover the following:
 
 * Vagrant
 * Django
+* Bootstrap
 
 ## Vagrant
 
@@ -200,4 +201,64 @@ serializer.save()
 
 3. `from rest_framework.response import Response`
 
-#####
+##### Class Based Views
+
+
+.
+1. `class ModelNameFunctionName(APIView)` - add all methods you want for this class
+
+###### Modules
+
+1. `from rest_framework.views import APIView`
+
+2. `from rest_framework.response import Response`
+
+3. `from rest_framework import status`
+
+4. `from rest_framework import mixins`
+
+5. `from rest_framework import generics`
+
+##### Authentication & Permissions
+
+1. `urlpatterns += [url(r'^api-auth/', include('rest_framework.urls',namespace='rest_framework')),]` - login view for the browsable API
+> In Django 1.9+, REST framework will set the namespace, so you may leave it out.
+
+###### Modules
+
+1. `from pygments.lexers import get_lexer_by_name`
+
+2. `from pygments.formatters.html import HtmlFormatter`
+
+3. `from pygments import highlight`
+
+4. `from django.contrib.auth.models import User`
+
+5. `from rest_framework import permissions`
+
+#### Hosting and Server Maintenan   ce
+
+##### Screen
+
+1. `Ctrl-a` - send commands to screen
+
+2. `Ctrl-a-c` - create a new window
+
+3. `Ctrl-a-n` - switch to next window
+
+4. `Ctrl-a-p` - switch to previous window
+
+5. `Ctrl-a-d` - detach window
+
+6. `Ctrl-a-H` - create a running log for the session
+
+7. `screen -r` - reattach windows
+
+## Bootstrap
+
+### Grid Layout
+
+1. The Bootstrap grid systems works using these rules:
+
+>sdfsad
+dsfsadfsda
