@@ -268,4 +268,15 @@ serializer.save()
 | Class prefix                     | .col-xs-                            | .col-sm-                                         | .col-md-                                         | .col-lg-                                         |
 | Max column width                 | Auto                                | ~62px                                            | ~81px                                            | ~97px                                            |
 
+2. Maximum number of columns is 12
 
+3. `<div class="clearfix visible-size-block"></div>` - put on every 12th column for each size
+
+4. `col-size-offset-*` - move grid columns to the right for alignment purpose
+
+5. `visible-size-*` - makes the element visible on the size specified
+> * may be inline, block and inline-block
+
+6. `hidden-size` - hide the elements on the size specified
+
+###
